@@ -66,5 +66,21 @@ exports.neuterTests = {
     test.equal(actual, expected, 'file patterns can be correctly read');
 
     test.done();
+  },
+  can_compile_coffee_script: function(test){
+
+    var actual = grunt.file.read('tmp/can_compile_coffeescript');
+    var expected = grunt.file.read('test/expected/can_compile_coffeescript');
+    test.equal(actual, expected, 'can compile coffeescript files');
+
+    test.done();
+  },
+  coffeescript_require_statements: function(test){
+
+    var actual = grunt.file.read('tmp/coffeescript_require_statements');
+    var expected = grunt.file.read('test/expected/coffeescript_require_statements');
+    test.equal(actual, expected, 'respects coffeescript require statements');
+
+    test.done();
   }
 };

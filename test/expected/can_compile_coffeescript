@@ -1,0 +1,17 @@
+(function() {
+
+var foo;
+
+foo = {
+  method1: function() {
+    var param;
+    return param = 'bar';
+  },
+  method2: function() {
+    var param;
+    return param = 'baz';
+  }
+};
+
+
+})();

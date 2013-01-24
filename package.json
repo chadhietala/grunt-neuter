@@ -20,6 +20,7 @@
     "grunt-contrib-jshint": "~0.1.1rc5",
     "grunt-contrib-nodeunit": "0.1.2rc5",
     "grunt-contrib-clean": "~0.4.0rc5",
-    "grunt-contrib-internal": "~0.1.1"
+    "grunt-contrib-internal": "~0.1.1",
+    "coffee-script": "~1.4.0"
   }
 }

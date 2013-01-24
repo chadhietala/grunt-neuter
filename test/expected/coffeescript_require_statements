@@ -1,0 +1,26 @@
+(function() {
+
+var c = 1;
+
+})();
+
+(function() {
+
+var b = true;
+
+})();
+
+(function() {
+
+var a;
+
+})();
+
+(function() {
+
+var test;
+
+test = 'coffee_required';
+
+
+})();

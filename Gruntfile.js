@@ -91,6 +91,22 @@ module.exports = function(grunt) {
         files: {
           'tmp/can_accept_file_patterns': ['test/fixtures/glob/*.js']
         }
+      },
+      can_compile_coffee_script: {
+        files: {
+          'tmp/can_compile_coffeescript' : ['test/fixtures/can_compile_coffeescript.coffee']
+        },
+        options: {
+          compileTo: 'coffee'
+        }
+      },
+      coffeescript_require_statements: {
+        files: {
+          'tmp/coffeescript_require_statements' : ['test/fixtures/coffeescript_require_statements.coffee']
+        },
+        options: {
+          compileTo: 'coffee'
+        }
       }
     },
     jshint: {
