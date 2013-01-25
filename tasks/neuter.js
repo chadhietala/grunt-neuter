@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     // the bufffer that we appened to over this run. 
     var out = [];
 
-    // keeps track of out available preprocessed files
+    // keeps track of out available compile to files
     var filteredFiles = [];
 
     // Hash of possible compile to languages    
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
     */
     var tryJs = function(filepath){
       var jsPath = filepath.substring(0, filepath.indexOf('.' + compileTo[options.compileTo].extension)) + '.js';
-      grunt.log.ok('Could not find "' + filepath + '" checking for dependancy at ' + jsPath);
+      grunt.log.ok('Could not find "' + filepath + '" checking for dependency at ' + jsPath);
       return finder(jsPath, true);
     }
 
@@ -80,13 +80,13 @@ module.exports = function(grunt) {
         if (compileTo[options.compileTo] && !checkedJs){
           tryJs(filepath)
         } else if (!grunt.file.exists(filepath) && checkedJs){
-          // Couldn't find the dependancy so let the user know
+          // Couldn't find the dependency so let the user know
           grunt.log.error('Source file "' + filepath + '" not found.');
         }
         return '';
       }  else if (checkedJs && grunt.file.exists(filepath)) {
           // Found the js file
-          grunt.log.ok('Found dependancy at "' + filepath + '"');
+          grunt.log.ok('Found dependency at "' + filepath + '"');
       } 
 
       // once a file has been required its source will 
