@@ -51,6 +51,8 @@ module.exports = function(grunt) {
 
     // matches `require('some/path/file');` statements.
     // no need to include an extension as this will be appended for you.
+    // These may have to evolve or be abstracted into the compileTo hash
+    // based upon which compile to language you are using.
     var requireSplitter = /(require[\(||\s][\'||\"].*[\'||\"||\'\)||\"\) || \"\)\; || \'\)\;])\n*/;
     var requireMatcher = /require[\(||\s][\'||\"](.*)[\'||\"]/;
 
