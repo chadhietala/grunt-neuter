@@ -28,7 +28,7 @@ module.exports = function(grunt) {
         moduleName: 'coffee-script'
       }
     }
-    
+    // Change the templates format
     var options = this.options({
       template: "(function() {\\\\n\\\\n<%= src %>\\\\n\\\\n})();",
       separator: "\n\n",
