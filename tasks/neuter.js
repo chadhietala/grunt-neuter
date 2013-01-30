@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     }
     
     var options = this.options({
-      template: "(function() {\n\n<%= src %>\n\n})();",
+      template: "(function() {\\\\n\\\\n<%= src %>\\\\n\\\\n})();",
       separator: "\n\n",
       includeSourceURL: false,
       baseURL: '',
